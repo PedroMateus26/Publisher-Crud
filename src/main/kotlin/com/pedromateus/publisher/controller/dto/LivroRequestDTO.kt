@@ -1,8 +1,6 @@
 package com.pedromateus.publisher.controller.dto
 
-import com.pedromateus.publisher.controller.Events
-
-data class LivroRequest(
+data class LivroRequestDTO(
     val titulo:String,
     val autor:String
 )
