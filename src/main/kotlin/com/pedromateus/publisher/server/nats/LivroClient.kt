@@ -1,6 +1,6 @@
 package com.pedromateus.publisher.server.nats
 
-import com.pedromateus.publisher.controller.dto.LivroResponse
+import com.pedromateus.publisher.service.dto.EventsInformation
 import io.micronaut.nats.annotation.NatsClient
 import io.micronaut.nats.annotation.Subject
 
@@ -8,9 +8,6 @@ import io.micronaut.nats.annotation.Subject
 interface LivroClient {
 
     @Subject("livro.estoque.reposicao",)
-    fun sendLivro(livroResponse: LivroResponse)
-
-//    @Subject("livro.estoque.vendas")
-//    fun sendLivroVendas(livroRequest: LivroResponse)
+    fun sendLivro(eventsInformation: EventsInformation)
 
 }

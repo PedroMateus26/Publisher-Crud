@@ -1,10 +1,10 @@
 package com.pedromateus.publisher.service
 
+import com.pedromateus.publisher.controller.Events
 import com.pedromateus.publisher.controller.dto.LivroResponse
 import com.pedromateus.publisher.server.nats.LivroClient
 import com.pedromateus.publisher.server.service.NatsService
 import io.kotest.core.spec.style.AnnotationSpec
-import io.kotest.matchers.shouldBe
 import io.micronaut.test.extensions.kotest.annotation.MicronautTest
 import io.mockk.every
 import io.mockk.mockk
@@ -18,7 +18,7 @@ class NatsServiceTest: AnnotationSpec() {
 
     @BeforeEach
     fun setUp(){
-        livroResponse= LivroResponse("titulo","autor")
+        livroResponse= LivroResponse("titulo","autor", Events.SAVE)
     }
 
     @Test

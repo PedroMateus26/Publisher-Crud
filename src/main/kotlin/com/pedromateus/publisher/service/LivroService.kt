@@ -1,10 +1,10 @@
 package com.pedromateus.publisher.service
 
 import com.pedromateus.publisher.controller.dto.LivroRequest
-import javax.inject.Singleton
+import com.pedromateus.publisher.service.dto.EventsInformation
+import java.util.*
 
-@Singleton
+
 interface LivroService {
-
-    fun cadastraLivro(livroRequest:LivroRequest)
+    fun sendNats(eventsInformation: EventsInformation)
 }
