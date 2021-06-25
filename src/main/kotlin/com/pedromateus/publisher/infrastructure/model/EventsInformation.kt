@@ -1,4 +1,4 @@
-package com.pedromateus.publisher.infrastructure.controller.livroevent
+package com.pedromateus.publisher.infrastructure.model
 
 import com.pedromateus.publisher.infrastructure.server.nats.Events
 

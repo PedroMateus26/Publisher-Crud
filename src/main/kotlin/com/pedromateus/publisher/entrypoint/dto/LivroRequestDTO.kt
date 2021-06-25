@@ -1,4 +1,4 @@
-package com.pedromateus.publisher.infrastructure.controller.dto
+package com.pedromateus.publisher.entrypoint.dto
 
 data class LivroRequestDTO(
     val titulo:String,

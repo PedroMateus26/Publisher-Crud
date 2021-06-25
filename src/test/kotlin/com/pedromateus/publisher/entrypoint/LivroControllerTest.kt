@@ -1,8 +1,9 @@
-package com.pedromateus.publisher.controller
+package com.pedromateus.publisher.entrypoint
 
-import com.pedromateus.publisher.infrastructure.controller.dto.LivroRequestDTO
-import com.pedromateus.publisher.infrastructure.controller.LivroController
-import com.pedromateus.publisher.core.ports.LivroService
+import com.pedromateus.publisher.core.mapper.LivroConverter
+import com.pedromateus.publisher.entrypoint.dto.LivroRequestDTO
+import com.pedromateus.publisher.entrypoint.LivroController
+import com.pedromateus.publisher.core.ports.LivroServicePort
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.shouldBe
 import io.micronaut.test.extensions.kotest.annotation.MicronautTest
@@ -14,7 +15,7 @@ import java.util.*
 @MicronautTest
 class LivroControllerTest : AnnotationSpec() {
 
-    val livroService = mockk<LivroService>()
+    val livroService = mockk<LivroServicePort>()
     val controller = LivroController(livroService)
 
     lateinit var livroRequestDTO: LivroRequestDTO
@@ -33,7 +34,7 @@ class LivroControllerTest : AnnotationSpec() {
 
     @Test
     fun `deve enviar um id e um objeto para service para nats para fazer o update`() {
-        every { livroService.updateLivro(any(),any()) } answers {}
+        every { livroService.updateLivro(any()) } answers {}
         val result = controller.atualizaLivroParaNats(UUID.randomUUID(),livroRequestDTO)
         result shouldBe Unit
     }

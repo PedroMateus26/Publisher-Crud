@@ -1,14 +1,15 @@
-package com.pedromateus.publisher.infrastructure.controller
+package com.pedromateus.publisher.entrypoint
 
-import com.pedromateus.publisher.infrastructure.controller.dto.LivroRequestDTO
-import com.pedromateus.publisher.core.ports.LivroService
+import com.pedromateus.publisher.core.mapper.LivroConverter
+import com.pedromateus.publisher.entrypoint.dto.LivroRequestDTO
+import com.pedromateus.publisher.core.ports.LivroServicePort
 import io.micronaut.http.annotation.*
 import org.slf4j.LoggerFactory
 import java.util.*
 
 @Controller("/livros")
 class LivroController(
-    private val livroService: LivroService,
+    private val livroServicePort: LivroServicePort,
 ) {
 
     private val logger = LoggerFactory.getLogger(this::class.java)
@@ -16,20 +17,22 @@ class LivroController(
 
     @Post
     fun livroParaNats(@Body livroRequestDTO: LivroRequestDTO) {
-
         logger.info("Recebendo livro $livroRequestDTO")
-        livroService.createLivro(livroRequestDTO)
+        val livro=LivroConverter.converteDtoParaLivro(livroRequestDTO, null)
+        livroServicePort.createLivro(livro)
     }
 
     @Put("/{id}")
     fun atualizaLivroParaNats(@PathVariable id: UUID, @Body livroRequestDTO: LivroRequestDTO) {
         logger.info("Recebendo livro $livroRequestDTO")
-        livroService.updateLivro(livroRequestDTO,id)
+        val livro=LivroConverter.converteDtoParaLivro(livroRequestDTO, id)
+        livroServicePort.updateLivro(livro)
     }
 
     @Delete("/{id}")
     fun deleteLivroParaNats(@PathVariable id: UUID) {
         logger.info("Recebendo livro $id")
-        livroService.deleteLivro(id)
+        val livro=LivroConverter.converteDtoParaLivro(null, id)
+        livroServicePort.deleteLivro(livro)
     }
 }
