@@ -1,10 +1,8 @@
 package com.pedromateus.publisher.service
 
-import com.pedromateus.publisher.controller.dto.LivroRequestDTO
-import com.pedromateus.publisher.server.nats.Events
-import com.pedromateus.publisher.server.nats.LivroClient
-import com.pedromateus.publisher.service.livroevent.EventsInformation
-import com.pedromateus.publisher.service.livroevent.LivroEvent
+import com.pedromateus.publisher.core.service.LivroServiceImpl
+import com.pedromateus.publisher.infrastructure.controller.dto.LivroRequestDTO
+import com.pedromateus.publisher.infrastructure.server.nats.LivroClient
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.shouldBe
 import io.micronaut.test.extensions.kotest.annotation.MicronautTest

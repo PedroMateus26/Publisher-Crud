@@ -1,6 +1,6 @@
-package com.pedromateus.publisher.server.nats
+package com.pedromateus.publisher.infrastructure.server.nats
 
-import com.pedromateus.publisher.service.livroevent.EventsInformation
+import com.pedromateus.publisher.infrastructure.controller.livroevent.EventsInformation
 import io.micronaut.nats.annotation.NatsClient
 import io.micronaut.nats.annotation.Subject
 

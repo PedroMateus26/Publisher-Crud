@@ -1,10 +1,7 @@
-package com.pedromateus.publisher.controller
+package com.pedromateus.publisher.infrastructure.controller
 
-import com.pedromateus.publisher.controller.dto.LivroRequestDTO
-import com.pedromateus.publisher.server.nats.Events
-import com.pedromateus.publisher.service.LivroService
-import com.pedromateus.publisher.service.livroevent.EventsInformation
-import com.pedromateus.publisher.service.livroevent.LivroEvent
+import com.pedromateus.publisher.infrastructure.controller.dto.LivroRequestDTO
+import com.pedromateus.publisher.core.ports.LivroService
 import io.micronaut.http.annotation.*
 import org.slf4j.LoggerFactory
 import java.util.*

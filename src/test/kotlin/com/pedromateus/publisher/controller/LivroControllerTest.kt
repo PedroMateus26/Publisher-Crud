@@ -1,7 +1,8 @@
 package com.pedromateus.publisher.controller
 
-import com.pedromateus.publisher.controller.dto.LivroRequestDTO
-import com.pedromateus.publisher.service.LivroService
+import com.pedromateus.publisher.infrastructure.controller.dto.LivroRequestDTO
+import com.pedromateus.publisher.infrastructure.controller.LivroController
+import com.pedromateus.publisher.core.ports.LivroService
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.shouldBe
 import io.micronaut.test.extensions.kotest.annotation.MicronautTest

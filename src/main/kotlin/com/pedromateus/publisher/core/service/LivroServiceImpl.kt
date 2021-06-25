@@ -1,10 +1,11 @@
-package com.pedromateus.publisher.service
+package com.pedromateus.publisher.core.service
 
-import com.pedromateus.publisher.controller.dto.LivroRequestDTO
-import com.pedromateus.publisher.server.nats.Events
-import com.pedromateus.publisher.server.nats.LivroClient
-import com.pedromateus.publisher.service.livroevent.EventsInformation
-import com.pedromateus.publisher.service.livroevent.LivroEvent
+import com.pedromateus.publisher.core.ports.LivroService
+import com.pedromateus.publisher.infrastructure.controller.dto.LivroRequestDTO
+import com.pedromateus.publisher.infrastructure.server.nats.Events
+import com.pedromateus.publisher.infrastructure.server.nats.LivroClient
+import com.pedromateus.publisher.infrastructure.controller.livroevent.EventsInformation
+import com.pedromateus.publisher.infrastructure.controller.livroevent.LivroEvent
 import org.slf4j.LoggerFactory
 import java.util.*
 import javax.inject.Singleton
@@ -12,7 +13,7 @@ import javax.inject.Singleton
 @Singleton
 class LivroServiceImpl(
     private val livroClient: LivroClient
-):LivroService{
+): LivroService {
 
     private val logger = LoggerFactory.getLogger(this::class.java)
 
