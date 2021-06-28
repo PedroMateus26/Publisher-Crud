@@ -3,7 +3,7 @@ package com.pedromateus.publisher.core.mapper
 import com.pedromateus.publisher.core.model.Livro
 import com.pedromateus.publisher.entrypoint.dto.LivroRequestDTO
 import com.pedromateus.publisher.infrastructure.model.LivroEvent
-import java.util.*
+import java.util.UUID
 
 class LivroConverter {
 

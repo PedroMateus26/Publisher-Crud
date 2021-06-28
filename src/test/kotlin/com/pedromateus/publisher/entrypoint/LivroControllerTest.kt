@@ -1,15 +1,13 @@
 package com.pedromateus.publisher.entrypoint
 
-import com.pedromateus.publisher.core.mapper.LivroConverter
-import com.pedromateus.publisher.entrypoint.dto.LivroRequestDTO
-import com.pedromateus.publisher.entrypoint.LivroController
 import com.pedromateus.publisher.core.ports.LivroServicePort
+import com.pedromateus.publisher.entrypoint.dto.LivroRequestDTO
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.shouldBe
 import io.micronaut.test.extensions.kotest.annotation.MicronautTest
 import io.mockk.every
 import io.mockk.mockk
-import java.util.*
+import java.util.UUID
 
 
 @MicronautTest

@@ -3,6 +3,8 @@ micronaut:
     name: publisherLivro
   server:
     port: 8081
+  cors:
+    eneable: true
 
 endpoints:
   health:

@@ -1,7 +1,7 @@
 package com.pedromateus.publisher.infrastructure.model
 
 import com.pedromateus.publisher.entrypoint.dto.LivroRequestDTO
-import java.util.*
+import java.util.UUID
 
 class LivroEvent(
     val id: UUID?,

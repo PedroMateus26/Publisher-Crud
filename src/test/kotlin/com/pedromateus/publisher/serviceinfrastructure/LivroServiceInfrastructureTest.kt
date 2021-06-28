@@ -1,6 +1,5 @@
 package com.pedromateus.publisher.serviceinfrastructure
 
-import com.pedromateus.publisher.core.model.Livro
 import com.pedromateus.publisher.infrastructure.model.LivroEvent
 import com.pedromateus.publisher.infrastructure.server.nats.LivroClient
 import com.pedromateus.publisher.infrastructure.serviceinfrastructure.LivroServiceInfrastructureImpl

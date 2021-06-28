@@ -1,10 +1,9 @@
 package com.pedromateus.publisher.infrastructure.serviceinfrastructure
 
-import com.pedromateus.publisher.core.model.Livro
 import com.pedromateus.publisher.core.ports.LivroServiceInfrastructurePort
 import com.pedromateus.publisher.infrastructure.model.EventsInformation
 import com.pedromateus.publisher.infrastructure.model.LivroEvent
-import com.pedromateus.publisher.infrastructure.server.nats.Events
+import com.pedromateus.publisher.infrastructure.model.Events
 import com.pedromateus.publisher.infrastructure.server.nats.LivroClient
 import javax.inject.Singleton
 

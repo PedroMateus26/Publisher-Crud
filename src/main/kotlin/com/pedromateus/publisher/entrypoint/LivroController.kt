@@ -3,9 +3,15 @@ package com.pedromateus.publisher.entrypoint
 import com.pedromateus.publisher.core.mapper.LivroConverter
 import com.pedromateus.publisher.entrypoint.dto.LivroRequestDTO
 import com.pedromateus.publisher.core.ports.LivroServicePort
-import io.micronaut.http.annotation.*
+import io.micronaut.http.annotation.Post
+import io.micronaut.http.annotation.Delete
+import io.micronaut.http.annotation.Put
+import io.micronaut.http.annotation.Controller
+import io.micronaut.http.annotation.Body
+import io.micronaut.http.annotation.PathVariable
 import org.slf4j.LoggerFactory
-import java.util.*
+import java.util.UUID
+
 
 @Controller("/livros")
 class LivroController(

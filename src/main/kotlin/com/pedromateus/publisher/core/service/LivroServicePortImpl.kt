@@ -2,11 +2,9 @@ package com.pedromateus.publisher.core.service
 
 import com.pedromateus.publisher.core.mapper.LivroConverter
 import com.pedromateus.publisher.core.model.Livro
-import com.pedromateus.publisher.core.ports.LivroServicePort
 import com.pedromateus.publisher.core.ports.LivroServiceInfrastructurePort
-import com.pedromateus.publisher.entrypoint.dto.LivroRequestDTO
+import com.pedromateus.publisher.core.ports.LivroServicePort
 import org.slf4j.LoggerFactory
-import java.util.*
 import javax.inject.Singleton
 
 @Singleton
